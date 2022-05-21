@@ -3,7 +3,6 @@
 Answers to [SQL-zoo tutorial](https://sqlzoo.net/wiki/SQL_Tutorial).
 
 ## Stages
----
 
 0. SELECT basics
 1. SELECT name
