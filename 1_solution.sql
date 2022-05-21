@@ -37,3 +37,30 @@ SELECT name, population, area
 FROM world
     WHERE area > 3000000 AND population < 250000000
         OR area < 3000000 AND population > 250000000
+
+-- 9. For South America show population in millions and GDP in billions both to 2 decimal places.
+SELECT name, round(population/1000000, 2), round(gdp/1000000000, 2)
+FROM world
+    WHERE continent = 'South America'
+
+-- 10. Show per-capita GDP for the trillion dollar countries to the nearest $1000.
+SELECT name, round(gdp/population, -3) as per_capita_gdp
+FROM world
+    WHERE gdp >= 1000000000000
+
+-- 11. Show the name and capital where the name and the capital have the same number of characters.
+SELECT name, capital
+FROM world 
+    WHERE LEN(name) = LEN(capital);
+
+-- 12. Show the name and the capital where the first letters of each match. Don't include countries where the name and the capital are the same word.
+SELECT name, capital
+FROM world
+    WHERE LEFT(name, 1) = LEFT(capital, 1)
+        AND name <> capital
+
+-- 13. Find the country that has all the vowels and no spaces in its name.
+SELECT name
+FROM world 
+    WHERE name NOT LIKE '% %'
+        AND name LIKE '%A%' AND name LIKE '%E%' AND name LIKE '%I%' AND name LIKE '%O%' AND name LIKE '%U%'
