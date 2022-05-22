@@ -13,4 +13,3 @@ Answers to [SQL-zoo tutorial](https://sqlzoo.net/wiki/SQL_Tutorial).
 6. More JOIN operations
 7. Using Null - Numeric examples 
 8. Self JOIN
-9. Window function
