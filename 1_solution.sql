@@ -49,6 +49,7 @@ FROM world
     WHERE gdp >= 1000000000000
 
 -- 11. Show the name and capital where the name and the capital have the same number of characters.
+-- Note: If solution is not valid according to sql-zoo, try changing SQL-engine (e.g for MySQL) in the top-right configuration menu. If needed, use the keyword 'LENGTH' instead of 'LEN'.
 SELECT name, capital
 FROM world 
     WHERE LEN(name) = LEN(capital);
